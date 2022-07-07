@@ -18,7 +18,7 @@ local config = {
   },
 
   -- Set colorscheme
-  colorscheme = "default_theme",
+  colorscheme = "onedark",
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
@@ -92,7 +92,14 @@ local config = {
       --     require("lsp_signature").setup()
       --   end,
       -- },
+      { "navarasu/onedark.nvim" },
     },
+    telescope = {
+      defaults = {
+        file_ignore_patterns = { "node_modules", "yarn.lock", "package-lock.json" },
+      },
+
+    }, 
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
       local null_ls = require "null-ls"
